@@ -6,7 +6,7 @@ namespace MyCalculator.Tests;
 public class CalculatorTests
 {
     [TestMethod]
-    public void AddNumbers()
+    public void AddNumbersTest()
     {
         // Arrange
         var calculator = new Calculator();
@@ -16,27 +16,27 @@ public class CalculatorTests
         Assert.AreEqual(9, res);
     }
     [TestMethod]
-    public void SubtractNumbers()
+    public void SubtractNumbersTest()
     {
         var calculator = new Calculator();
         var res = calculator.Subtract(10, 3, 5);
         Assert.AreEqual(2, res);
     }
     [TestMethod]
-    public void MultiplyNumbers() { 
+    public void MultiplyNumbersTest() { 
         var calculator = new Calculator();
         var res = calculator.Multiply(10, -1, -2);
         Assert.AreEqual(20, res);
     }
     [TestMethod]
-    public void DivideNumbers()
+    public void DivideNumbersTest()
     {
         var calculator = new Calculator();
         var res = calculator.Divide(100, 2, 5, 5, 2);
         Assert.AreEqual(1, res);
     }
     [TestMethod]
-    public void DivideByZero()
+    public void DivideByZeroTest()
     {
         var calculator = new Calculator();
         var res = calculator.Divide(20, 0);
