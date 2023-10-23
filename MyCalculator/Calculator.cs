@@ -33,11 +33,15 @@ public class Calculator()
         return m;
     }
 
-    public int Divide(params int[] p)
+    public int? Divide(params int[] p)
     {
         int d = p[0];
         for (int i = 0; i < p.Length - 1; i++)
         {
+            if (p[i + 1] == 0)
+            {
+                return null;
+            }
             d /= p[i + 1]; 
         }
         return d;
