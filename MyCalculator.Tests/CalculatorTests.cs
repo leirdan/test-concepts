@@ -32,7 +32,14 @@ public class CalculatorTests
     public void DivideNumbers()
     {
         var calculator = new Calculator();
-        var res = calculator.Divide(20, 5, 2);
-        Assert.AreEqual(2, res);
+        var res = calculator.Divide(100, 2, 5, 5, 2);
+        Assert.AreEqual(1, res);
+    }
+    [TestMethod]
+    public void DivideByZero()
+    {
+        var calculator = new Calculator();
+        var res = calculator.Divide(20, 0);
+        Assert.AreEqual(null, res);
     }
 }
